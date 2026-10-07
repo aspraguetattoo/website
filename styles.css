@@ -89,12 +89,12 @@ h1, h2, h3, .brand strong, .eyebrow {
 }
 
 .brand-mark {
-  width: 42px;
-  height: 42px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 1px solid var(--line-hard);
-  filter: contrast(1.15);
+  width: 36px;
+  height: 48px;
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+  filter: none;
 }
 
 .brand strong {
