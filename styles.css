@@ -89,11 +89,12 @@ h1, h2, h3, .brand strong, .eyebrow {
 }
 
 .brand-mark {
-  width: 36px;
-  height: 48px;
+  width: 34px;
+  height: 46px;
   object-fit: contain;
-  border: 0;
+  border: none;
   border-radius: 0;
+  background: transparent;
   filter: none;
 }
 
@@ -548,11 +549,13 @@ address {
 }
 
 .footer-mark {
-  width: 72px;
-  height: 72px;
-  object-fit: cover;
+  width: 56px;
+  height: 76px;
+  object-fit: contain;
   margin: 0 auto 1rem;
-  filter: contrast(1.1);
+  border: none;
+  border-radius: 0;
+  filter: none;
 }
 
 .fine {
