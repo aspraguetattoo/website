@@ -423,36 +423,69 @@ h1, h2, h3, .brand strong, .eyebrow {
   max-width: none !important;
 }
 
-.heal-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+/* ---------- Aftercare: one sectioned article ---------- */
+.heal-article {
+  max-width: 70ch;
 }
 
-.heal-grid article {
-  background: var(--bg-raise);
-  border: 1px solid var(--line);
-  padding: 1.4rem 1.5rem;
+.heal-section {
+  padding: 2.2rem 0;
+  border-top: 1px solid var(--line);
 }
 
-.heal-grid h3 {
-  margin-top: 0;
-  font-size: 1.05rem;
+.heal-section:first-child {
+  padding-top: 0;
+  border-top: 0;
 }
 
-.heal-grid ol,
-.heal-grid ul {
-  margin: 0;
-  padding-left: 1.15rem;
+.heal-section:last-child {
+  padding-bottom: 0;
+}
+
+.heal-section h3 {
+  margin: 0 0 1rem;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.heal-section p,
+.heal-section li {
   color: #d0cbc3;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
-.heal-grid li + li {
-  margin-top: 0.55rem;
+.heal-section p {
+  margin: 0;
 }
 
-.heal-callout {
-  background: #0c0c0c;
+.heal-section p + p {
+  margin-top: 1rem;
+}
+
+.heal-section ol,
+.heal-section ul {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.heal-section li {
+  padding-left: 0.35rem;
+}
+
+.heal-section li + li {
+  margin-top: 0.6rem;
+}
+
+.heal-section li::marker {
+  color: var(--muted);
+}
+
+.heal-section ol li::marker {
+  font-variant-numeric: tabular-nums;
 }
 
 .book-layout {
@@ -566,8 +599,7 @@ address {
   .hero,
   .about-grid,
   .contact-grid,
-  .book-layout,
-  .heal-grid {
+  .book-layout {
     grid-template-columns: 1fr;
   }
 
