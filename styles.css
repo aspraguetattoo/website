@@ -939,6 +939,17 @@ address {
   color: #111;
 }
 
+/* "Other style" box: hidden unless Other is selected */
+.choice-group .other-style {
+  display: none;
+  margin-top: 1rem;
+}
+
+.choice-group:has(#wl-style-other:checked) .other-style,
+.choice-group.show-other .other-style {
+  display: flex;
+}
+
 .pill input:focus-visible + span {
   outline: 1px solid var(--line-hard);
   outline-offset: 2px;

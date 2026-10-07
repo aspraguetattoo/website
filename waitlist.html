@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -117,7 +117,13 @@
             <div class="pill-row">
               <label class="pill"><input type="radio" name="style" value="Traditional" /><span>Traditional</span></label>
               <label class="pill"><input type="radio" name="style" value="Neo-Traditional" /><span>Neo-Traditional</span></label>
+              <label class="pill"><input type="radio" name="style" value="Black &amp; Grey" /><span>Black &amp; Grey</span></label>
+              <label class="pill"><input type="radio" name="style" value="Other" id="wl-style-other" /><span>Other</span></label>
               <label class="pill"><input type="radio" name="style" value="Not sure" /><span>Not sure</span></label>
+            </div>
+            <div class="field other-style">
+              <label for="wl-other-style">Other style <span class="opt">optional</span></label>
+              <input id="wl-other-style" type="text" name="other_style" placeholder="e.g. blackwork, realism, script" />
             </div>
           </fieldset>
 
@@ -166,6 +172,22 @@
     </p>
   </footer>
 
+  <script>
+    // Show the "Other style" box only when Other is picked (CSS :has does this too; this covers older browsers
+    // and keeps the empty box out of the email when it's hidden).
+    (function () {
+      var group = document.querySelector(".choice-group");
+      var other = document.getElementById("wl-style-other");
+      var box = document.getElementById("wl-other-style");
+      if (!group || !other || !box) return;
+      function sync() {
+        group.classList.toggle("show-other", other.checked);
+        box.disabled = !other.checked;
+      }
+      group.addEventListener("change", sync);
+      sync();
+    })();
+  </script>
   <script src="nav.js"></script>
 </body>
 </html>
