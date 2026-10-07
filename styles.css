@@ -348,9 +348,22 @@ h1, h2, h3, .brand strong, .eyebrow {
   font-size: 0.95rem;
 }
 
-.work-note {
-  color: var(--muted);
-  margin-top: 1.2rem;
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.ig-grid .instagram-media {
+  background: #111 !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
 }
 
 .heal-grid {
@@ -558,8 +571,51 @@ address {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+.spot-list {
+  display: grid;
+  gap: 0.8rem;
+  max-width: 46rem;
+}
+
+.spot {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  background: var(--bg-raise);
+}
+
+.spot time {
+  color: var(--ink);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+.spot strong {
+  display: block;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-bottom: 0.2rem;
+}
+
+.spot p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.spot-empty {
+  color: var(--muted);
+  border: 1px dashed var(--line);
+  padding: 1.2rem;
+}
+
+@media (max-width: 640px) {
+  .spot {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
   }
 }
+
