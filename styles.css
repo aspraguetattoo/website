@@ -982,6 +982,7 @@ address {
 }
 
 .choice-group:has(#wl-style-other:checked) .other-style,
+.choice-group:has(#bk-style-other:checked) .other-style,
 .choice-group.show-other .other-style {
   display: flex;
 }
@@ -1023,7 +1024,8 @@ address {
   font-size: 0.85rem;
 }
 
-.waitlist .book-cards {
+.waitlist .book-cards,
+.book .book-cards {
   align-content: start;
 }
 
@@ -1126,5 +1128,195 @@ div.book-card:hover {
   .about-photo {
     position: static;
     max-width: 34rem;
+  }
+}
+
+/* ---------- Booking page ---------- */
+.form-callout {
+  margin: 0;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--line-hard);
+  background: var(--bg-raise);
+  color: #d0cbc3;
+  font-size: 0.95rem;
+}
+
+.form-callout strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.form-aside {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border: 1px dashed var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.form-aside strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Required policy checkbox: dark square, fills light grey when checked */
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  color: #d0cbc3;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.check input {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: 0 0 auto;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0.1rem 0 0;
+  border: 1px solid var(--muted);
+  border-radius: 0;
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.check input::after {
+  content: "";
+  width: 0.35rem;
+  height: 0.65rem;
+  margin-top: -0.12rem;
+  border: solid #111;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.check:hover input {
+  border-color: var(--ink);
+}
+
+.check input:checked {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.check input:checked::after {
+  opacity: 1;
+}
+
+.check input:focus-visible {
+  outline: 1px solid var(--line-hard);
+  outline-offset: 2px;
+}
+
+.check .req {
+  color: var(--muted);
+}
+
+.book-card .card-hours {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.book-card .card-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.booking-steps {
+  max-width: 44rem;
+}
+
+.booking-steps li {
+  color: #d0cbc3;
+}
+
+.booking-steps li:last-child {
+  padding-bottom: 0;
+}
+
+.booking-steps strong {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* How it works + Deposit & policies side by side on desktop */
+.booking-info {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.booking-info .section-head {
+  margin-bottom: 1.8rem;
+}
+
+.booking-info .heal-article {
+  max-width: none;
+}
+
+#policies,
+#faq {
+  scroll-margin-top: 6rem;
+}
+
+/* FAQ: two columns of questions on desktop */
+.faq-grid {
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: clamp(2rem, 5vw, 5rem);
+}
+
+.faq-grid .heal-section {
+  padding: 1.8rem 0;
+}
+
+.faq-grid .heal-section:nth-child(-n + 2) {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.faq-grid .heal-section:nth-last-child(-n + 2) {
+  padding-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .booking-info,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-info {
+    gap: 0;
+  }
+
+  .booking-info > #policies {
+    margin-top: 7vh;
+    padding-top: 7vh;
+    border-top: 1px solid var(--line);
+  }
+
+  .faq-grid .heal-section:nth-child(2) {
+    padding-top: 1.8rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .faq-grid .heal-section:nth-last-child(2) {
+    padding-bottom: 1.8rem;
   }
 }
