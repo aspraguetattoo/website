@@ -348,11 +348,67 @@ h1, h2, h3, .brand strong, .eyebrow {
   font-size: 0.95rem;
 }
 
-.ig-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+.ig-banner {
+  display: flex;
+  align-items: center;
   gap: 1rem;
-  align-items: start;
+  margin: 0 0 1.4rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--line);
+  text-decoration: none;
+  max-width: 36rem;
+}
+
+.ig-banner img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  filter: contrast(1.15);
+}
+
+.ig-banner strong {
+  display: block;
+  font-family: var(--display);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.ig-banner em {
+  color: var(--muted);
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+.gallery {
+  columns: 3 240px;
+  column-gap: 0.7rem;
+}
+
+.gallery figure {
+  margin: 0 0 0.7rem;
+  break-inside: avoid;
+  background: #111;
+  border: 1px solid var(--line);
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery figcaption {
+  padding: 0.45rem 0.6rem 0.55rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .gallery {
+    columns: 2 140px;
+  }
 }
 
 .ig-grid .instagram-media {
