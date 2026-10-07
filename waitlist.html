@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -66,11 +66,13 @@
       </div>
 
       <div class="book-layout">
+        <div class="form-col">
+        <p class="aside-kicker">Join the list</p>
         <form class="waitlist-form" action="https://formsubmit.co/aspraguetattoo@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New WAITLIST signup" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_next" value="https://aspraguetattoos.com/thanks.html" />
-          <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" hidden />
 
           <div class="field-row">
             <div class="field">
@@ -96,35 +98,47 @@
 
           <div class="field">
             <label for="wl-idea">Tattoo idea <span class="req">*</span></label>
-            <textarea id="wl-idea" name="tattoo_idea" rows="5" required placeholder="What you want, any must-have elements, color or black &amp; grey, cover-up or fresh skin."></textarea>
+            <textarea id="wl-idea" name="tattoo_idea" rows="6" required placeholder="What you want, any must-have elements, color or black &amp; grey, cover-up or fresh skin."></textarea>
           </div>
 
           <div class="field-row">
             <div class="field">
               <label for="wl-placement">Placement</label>
-              <input id="wl-placement" type="text" name="placement" placeholder="e.g. outer forearm, calf, upper arm" />
+              <input id="wl-placement" type="text" name="placement" placeholder="e.g. forearm, calf" />
             </div>
             <div class="field">
               <label for="wl-size">Approximate size</label>
-              <input id="wl-size" type="text" name="approx_size" placeholder="e.g. palm-sized, 4 in., half sleeve" />
+              <input id="wl-size" type="text" name="approx_size" placeholder="e.g. palm-sized, 4 in." />
             </div>
           </div>
 
           <fieldset class="field choice-group">
             <legend>Style</legend>
-            <label><input type="radio" name="style" value="Traditional" /> Traditional</label>
-            <label><input type="radio" name="style" value="Neo-Traditional" /> Neo-Traditional</label>
-            <label><input type="radio" name="style" value="Not sure" /> Not sure</label>
+            <div class="pill-row">
+              <label class="pill"><input type="radio" name="style" value="Traditional" /><span>Traditional</span></label>
+              <label class="pill"><input type="radio" name="style" value="Neo-Traditional" /><span>Neo-Traditional</span></label>
+              <label class="pill"><input type="radio" name="style" value="Black &amp; Grey" /><span>Black &amp; Grey</span></label>
+              <label class="pill"><input type="radio" name="style" value="Other" id="wl-style-other" /><span>Other</span></label>
+              <label class="pill"><input type="radio" name="style" value="Not sure" /><span>Not sure</span></label>
+            </div>
+            <div class="field other-style">
+              <label for="wl-other-style">Other style <span class="opt">optional</span></label>
+              <input id="wl-other-style" type="text" name="other_style" placeholder="e.g. blackwork, realism, script" />
+            </div>
           </fieldset>
 
           <div class="field">
             <label for="wl-days">Preferred days</label>
-            <input id="wl-days" type="text" name="preferred_days" placeholder="e.g. Saturdays, weekday afternoons (shop is open Tue–Sun)" />
+            <input id="wl-days" type="text" name="preferred_days" placeholder="e.g. Saturdays, weekday afternoons" aria-describedby="wl-days-hint" />
+            <span class="field-hint" id="wl-days-hint">Shop is open Tue&ndash;Sun.</span>
           </div>
 
-          <button class="btn btn-solid" type="submit">Join the waitlist</button>
-          <p class="form-note">You&rsquo;ll get a quick &ldquo;I&rsquo;m not a robot&rdquo; check after you hit submit.</p>
+          <div class="form-actions">
+            <button class="btn btn-solid" type="submit">Join the waitlist</button>
+            <p class="form-note">You&rsquo;ll get a quick &ldquo;I&rsquo;m not a robot&rdquo; check after you hit submit.</p>
+          </div>
         </form>
+        </div>
 
         <div class="book-cards">
           <p class="aside-kicker">Other ways to join</p>
@@ -158,6 +172,22 @@
     </p>
   </footer>
 
+  <script>
+    // Show the "Other style" box only when Other is picked (CSS :has does this too; this covers older browsers
+    // and keeps the empty box out of the email when it's hidden).
+    (function () {
+      var group = document.querySelector(".choice-group");
+      var other = document.getElementById("wl-style-other");
+      var box = document.getElementById("wl-other-style");
+      if (!group || !other || !box) return;
+      function sync() {
+        group.classList.toggle("show-other", other.checked);
+        box.disabled = !other.checked;
+      }
+      group.addEventListener("change", sync);
+      sync();
+    })();
+  </script>
   <script src="nav.js"></script>
 </body>
 </html>
