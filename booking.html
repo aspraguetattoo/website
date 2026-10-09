@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -43,7 +43,6 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="work.html">Work</a>
-      <a href="guest.html">Guest spots</a>
       <a href="healing.html">Healing</a>
       <a href="booking.html" aria-current="page">Booking</a>
       <a href="faq.html">FAQ</a>
@@ -174,7 +173,7 @@
 
             <label class="check" for="bk-policy">
               <input id="bk-policy" type="checkbox" name="deposit_policy_ack" value="Yes, I understand the $100 non-refundable deposit and rescheduling policy." required />
-              <span>I understand the $100 non-refundable deposit and <a href="#policies">rescheduling policy</a>.&nbsp;<span class="req">*</span></span>
+              <span>I understand the $100 non-refundable deposit and <a href="faq.html#policies" target="_blank" rel="noopener">rescheduling policy</a>.&nbsp;<span class="req">*</span></span>
             </label>
 
             <div class="form-actions">
@@ -182,100 +181,27 @@
               <p class="form-note">You&rsquo;ll get a quick &ldquo;I&rsquo;m not a robot&rdquo; check after you hit submit.</p>
             </div>
           </form>
+          <p class="form-note form-faq-link">Deposit, rescheduling, other ways to book, and how it works: <a href="faq.html#how-booking-works">see the FAQ</a>.</p>
         </div>
 
-        <div class="book-cards">
-          <p class="aside-kicker">Other ways to book</p>
-          <a class="book-card" href="mailto:info@facesinthedark.com?subject=Booking%20with%20Aarron%20Sprague">
-            <span class="work-meta">Email the shop &middot; preferred</span>
-            <strong>info@facesinthedark.com</strong>
-            <span>Subject line: Booking with Aarron Sprague</span>
-          </a>
-          <a class="book-card" href="mailto:aspraguetattoo@gmail.com?subject=Tattoo%20booking">
-            <span class="work-meta">Email Aarron directly</span>
-            <strong>aspraguetattoo@gmail.com</strong>
-            <span>Same details. Good for follow-ups and guest spots.</span>
-          </a>
-          <a class="book-card" href="https://www.instagram.com/aspraguetattoo/" target="_blank" rel="noopener">
-            <span class="work-meta">DM on Instagram</span>
-            <strong>@aspraguetattoo</strong>
-            <span>Send your idea, placement, and size. Email is cleaner for custom work.</span>
-          </a>
-          <a class="book-card" href="tel:+15125049988">
-            <span class="work-meta">Shop desk</span>
-            <strong>(512) 504-9988</strong>
-            <span>Faces In The Dark can route you if you are not sure where to start.</span>
-          </a>
+        <div class="book-cards schedule" id="schedule">
+          <p class="aside-kicker">Schedule</p>
           <div class="book-card">
-            <span class="work-meta">The shop</span>
+            <span class="work-meta">Home base</span>
             <strong>Faces In The Dark Tattoo</strong>
-            <span>121 Hall Professional Center, Suite E<br />Kyle, TX 78640</span>
-            <span class="card-hours">Tue&ndash;Sat 12&ndash;8 &middot; Sun 12&ndash;6 &middot; Mon closed</span>
-            <a class="card-link" href="https://maps.google.com/?q=121+Hall+Professional+Center+E+Kyle+TX+78640" target="_blank" rel="noopener">Open in maps</a>
+            <span>Kyle, TX</span>
+            <span class="card-hours">Books reopen early December</span>
+          </div>
+          <div class="book-card">
+            <span class="work-meta">Guest spot</span>
+            <strong>Exclusive Tattoo</strong>
+            <span>Corpus Christi, Texas</span>
+            <span class="card-hours"><time datetime="2026-12-28">Dec 28, 2026 &ndash; Jan 4, 2027</time></span>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="band booking-info">
-    <section class="booking-info-col" id="how-it-works">
-      <div class="band-label">How it works</div>
-      <div class="section-head">
-        <h2>Four steps to the chair.</h2>
-      </div>
-      <ol class="steps booking-steps">
-        <li>
-          <strong>Send a request or set up a consult</strong>
-          Use the form above, email the shop or Aarron directly, or DM
-          <a href="https://www.instagram.com/aspraguetattoo/" target="_blank" rel="noopener">@aspraguetattoo</a>.
-          Not sure yet? Ask for a free consultation.
-        </li>
-        <li>
-          <strong>Talk through the idea</strong>
-          Idea, size, placement, color vs black &amp; grey, reference images, any existing tattoo or scar in the area, and dates that work for you.
-        </li>
-        <li>
-          <strong>Pay the $100 deposit to lock the date</strong>
-          The non-refundable deposit holds your appointment. See the policies below.
-        </li>
-        <li>
-          <strong>Get tattooed</strong>
-          Come in on your date at Faces In The Dark Tattoo in Kyle, then follow the
-          <a href="healing.html">aftercare guide</a> while it heals.
-        </li>
-      </ol>
-    </section>
-
-    <section class="booking-info-col" id="policies">
-      <div class="band-label">Deposit &amp; policies</div>
-      <div class="section-head">
-        <h2>The fine print, kept short.</h2>
-      </div>
-      <article class="heal-article">
-        <section class="heal-section">
-          <h3>Consultations are free</h3>
-          <p>Not sure about the idea, size, or placement yet? A consultation costs nothing. Set one up through the form above (pick &ldquo;Free consultation&rdquo;), by email, or with an Instagram DM.</p>
-        </section>
-        <section class="heal-section">
-          <h3>A $100 deposit holds your appointment</h3>
-          <p>Every booking requires a $100 non-refundable deposit to hold the appointment.</p>
-        </section>
-        <section class="heal-section">
-          <h3>Rescheduling</h3>
-          <p>Life happens. You get one free reschedule with at least 24&#8288;&ndash;&#8288;48 hours&rsquo; notice before your appointment.</p>
-          <p>After that, a new deposit is required to book a new appointment.</p>
-        </section>
-      </article>
-    </section>
-    </div>
-
-    <section class="band faq-teaser">
-      <a class="book-card faq-card" href="faq.html">
-        <span class="work-meta">FAQ</span>
-        <strong>Questions about age, pricing, payment, or drawings?</strong>
-        <span class="card-link">Read the FAQ &rarr;</span>
-      </a>
-    </section>
   </main>
 
   <footer class="site-footer">
