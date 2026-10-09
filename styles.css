@@ -1288,3 +1288,97 @@ div.book-card:hover {
     position: static;
   }
 }
+
+/* ---------- Reference photo uploads (booking + waitlist forms) ---------- */
+.file-group {
+  border: 0;
+  padding: 0;
+  min-inline-size: 0;
+}
+
+.file-group > legend {
+  margin-bottom: 0.5rem;
+}
+
+.file-stack {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.waitlist-form input[type="file"] {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0.5rem 0.6rem;
+  background: var(--bg);
+  border: 1px dashed var(--line);
+  border-radius: 0;
+  color: var(--muted);
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.waitlist-form input[type="file"]:hover {
+  border-color: var(--muted);
+}
+
+.waitlist-form input[type="file"]:focus-visible {
+  outline: 1px solid var(--line-hard);
+  outline-offset: 2px;
+}
+
+.waitlist-form input[type="file"]::file-selector-button {
+  margin-right: 0.8rem;
+  padding: 0.45rem 0.9rem;
+  background: transparent;
+  border: 1px solid var(--line-hard);
+  border-radius: 0;
+  color: var(--ink);
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.waitlist-form input[type="file"]::file-selector-button:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.file-group .field-hint a {
+  color: var(--ink);
+}
+
+.file-warn {
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line-hard);
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.file-clear {
+  justify-self: start;
+  align-self: flex-start;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--muted);
+  color: var(--muted);
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.file-clear:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}

@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -69,7 +69,7 @@
       <div class="book-layout">
         <div class="form-col">
         <p class="aside-kicker">Join the list</p>
-        <form class="waitlist-form" action="https://formsubmit.co/aspraguetattoo@gmail.com" method="POST">
+        <form class="waitlist-form" action="https://formsubmit.co/aspraguetattoo@gmail.com" method="POST" enctype="multipart/form-data">
           <input type="hidden" name="_subject" value="New WAITLIST signup" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_next" value="https://aspraguetattoos.com/thanks.html" />
@@ -112,6 +112,18 @@
               <input id="wl-size" type="text" name="approx_size" placeholder="e.g. palm-sized, 4 in." />
             </div>
           </div>
+
+          <fieldset class="field file-group" data-max-mb="10">
+            <legend>Reference photos <span class="opt">optional</span></legend>
+            <div class="file-stack">
+              <input id="wl-ref-1" type="file" name="reference_1" accept="image/*" aria-label="Reference photo 1" aria-describedby="wl-ref-hint" />
+              <input id="wl-ref-2" type="file" name="reference_2" accept="image/*" aria-label="Reference photo 2" aria-describedby="wl-ref-hint" />
+              <input id="wl-ref-3" type="file" name="reference_3" accept="image/*" aria-label="Reference photo 3" aria-describedby="wl-ref-hint" />
+            </div>
+            <span class="field-hint" id="wl-ref-hint">Optional &middot; up to about 10 MB total (2&ndash;3 phone photos). More references? Email them to <a href="mailto:aspraguetattoo@gmail.com?subject=Waitlist%20references">aspraguetattoo@gmail.com</a> after you submit.</span>
+            <p class="file-warn" role="status" aria-live="polite" hidden></p>
+            <button class="file-clear" type="button" hidden>Clear photos</button>
+          </fieldset>
 
           <fieldset class="field choice-group">
             <legend>Style</legend>
@@ -186,6 +198,7 @@
       sync();
     })();
   </script>
+  <script src="uploads.js"></script>
   <script src="nav.js"></script>
 </body>
 </html>

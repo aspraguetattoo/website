@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -75,7 +75,7 @@
             Requests are being collected now for <strong>early December and later</strong>.
             Want first pick of dates? <a href="waitlist.html">Join the waitlist</a> too.
           </p>
-          <form class="waitlist-form booking-form" action="https://formsubmit.co/aspraguetattoo@gmail.com" method="POST">
+          <form class="waitlist-form booking-form" action="https://formsubmit.co/aspraguetattoo@gmail.com" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_subject" value="New BOOKING request" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_next" value="https://aspraguetattoos.com/booking-thanks.html" />
@@ -127,6 +127,18 @@
               </div>
             </div>
 
+            <fieldset class="field file-group" data-max-mb="10">
+              <legend>Reference photos <span class="opt">optional</span></legend>
+              <div class="file-stack">
+                <input id="bk-ref-1" type="file" name="reference_1" accept="image/*" aria-label="Reference photo 1" aria-describedby="bk-ref-hint" />
+                <input id="bk-ref-2" type="file" name="reference_2" accept="image/*" aria-label="Reference photo 2" aria-describedby="bk-ref-hint" />
+                <input id="bk-ref-3" type="file" name="reference_3" accept="image/*" aria-label="Reference photo 3" aria-describedby="bk-ref-hint" />
+              </div>
+              <span class="field-hint" id="bk-ref-hint">Optional &middot; up to about 10 MB total (2&ndash;3 phone photos). More references? Email them to <a href="mailto:aspraguetattoo@gmail.com?subject=Booking%20references">aspraguetattoo@gmail.com</a> after you submit.</span>
+              <p class="file-warn" role="status" aria-live="polite" hidden></p>
+              <button class="file-clear" type="button" hidden>Clear photos</button>
+            </fieldset>
+
             <fieldset class="field choice-group style-group">
               <legend>Style</legend>
               <div class="pill-row">
@@ -164,11 +176,6 @@
               <input id="bk-days" type="text" name="preferred_days_times" placeholder="e.g. Saturdays, weekday afternoons" aria-describedby="bk-days-hint" />
               <span class="field-hint" id="bk-days-hint">Shop hours: Tue&ndash;Sat 12&ndash;8, Sun 12&ndash;6, closed Mon.</span>
             </div>
-
-            <p class="form-aside">
-              <strong>Reference photos:</strong> no uploads here. After you submit, email them to
-              <a href="mailto:aspraguetattoo@gmail.com?subject=Booking%20references">aspraguetattoo@gmail.com</a>.
-            </p>
 
             <label class="check" for="bk-policy">
               <input id="bk-policy" type="checkbox" name="deposit_policy_ack" value="Yes, I understand the $100 non-refundable deposit and rescheduling policy." required />
@@ -231,6 +238,7 @@
       sync();
     })();
   </script>
+  <script src="uploads.js"></script>
   <script src="nav.js"></script>
 </body>
 </html>
