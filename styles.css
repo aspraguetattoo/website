@@ -552,11 +552,18 @@ address {
   color: var(--muted);
 }
 
-.footer-mark {
-  width: 56px;
-  height: 76px;
-  object-fit: contain;
-  margin: 0 auto 1rem;
+/* Footer wordmark (light logo on transparent background) */
+.footer-logo {
+  display: block;
+  width: 300px;
+  max-width: 70vw;
+  margin: 0 auto 1.4rem;
+}
+
+.footer-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
   border: none;
   border-radius: 0;
   filter: none;
