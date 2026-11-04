@@ -75,66 +75,65 @@
             Requests are being collected now for <strong>early December and later</strong>.
             Want first pick of dates? <a href="waitlist.html">Join the waitlist</a> too.
           </p>
-          <form class="waitlist-form booking-form" action="https://formsubmit.co/aspraguetattoo@gmail.com" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="_subject" value="New BOOKING request" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value="https://aspraguetattoos.com/booking-thanks.html" />
-            <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" hidden />
+          <form class="waitlist-form booking-form" action="https://forminit.com/f/5znqfpinwky" data-thanks="https://aspraguetattoos.com/booking-thanks.html" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="fi-text-form_type" value="BOOKING" />
+            <input type="hidden" name="fi-text-subject" value="New BOOKING request" />
+            <input type="hidden" name="_gotcha" value="" style="display:none !important" />
 
             <fieldset class="field choice-group">
               <legend>Request type</legend>
               <div class="pill-row">
-                <label class="pill"><input type="radio" name="request_type" value="Free consultation" /><span>Free consultation</span></label>
-                <label class="pill"><input type="radio" name="request_type" value="Tattoo appointment" /><span>Tattoo appointment</span></label>
+                <label class="pill"><input type="radio" name="fi-radio-request_type" value="Free consultation" /><span>Free consultation</span></label>
+                <label class="pill"><input type="radio" name="fi-radio-request_type" value="Tattoo appointment" /><span>Tattoo appointment</span></label>
               </div>
             </fieldset>
 
             <div class="field-row">
               <div class="field">
                 <label for="bk-name">Name <span class="req">*</span></label>
-                <input id="bk-name" type="text" name="name" autocomplete="name" required />
+                <input id="bk-name" type="text" name="fi-sender-fullName" autocomplete="name" required />
               </div>
               <div class="field">
                 <label for="bk-email">Email <span class="req">*</span></label>
-                <input id="bk-email" type="email" name="email" autocomplete="email" required />
+                <input id="bk-email" type="email" name="fi-sender-email" autocomplete="email" required />
               </div>
             </div>
 
             <div class="field-row">
               <div class="field">
                 <label for="bk-phone">Phone <span class="opt">optional</span></label>
-                <input id="bk-phone" type="tel" name="phone" autocomplete="tel" />
+                <input id="bk-phone" type="tel" name="fi-text-phone" autocomplete="tel" />
               </div>
               <div class="field">
                 <label for="bk-ig">Instagram handle <span class="opt">optional</span></label>
-                <input id="bk-ig" type="text" name="instagram" placeholder="@yourhandle" autocapitalize="off" />
+                <input id="bk-ig" type="text" name="fi-text-instagram" placeholder="@yourhandle" autocapitalize="off" />
               </div>
             </div>
 
             <div class="field">
               <label for="bk-idea">Tattoo idea <span class="req">*</span></label>
-              <textarea id="bk-idea" name="tattoo_idea" rows="6" required placeholder="What you want, any must-have elements, and anything already in the area (existing tattoo or scar)."></textarea>
+              <textarea id="bk-idea" name="fi-text-tattoo_idea" rows="6" required placeholder="What you want, any must-have elements, and anything already in the area (existing tattoo or scar)."></textarea>
             </div>
 
             <div class="field-row">
               <div class="field">
                 <label for="bk-placement">Placement</label>
-                <input id="bk-placement" type="text" name="placement" placeholder="e.g. forearm, calf" />
+                <input id="bk-placement" type="text" name="fi-text-placement" placeholder="e.g. forearm, calf" />
               </div>
               <div class="field">
                 <label for="bk-size">Approximate size</label>
-                <input id="bk-size" type="text" name="approx_size" placeholder="e.g. palm-sized, 4 in." />
+                <input id="bk-size" type="text" name="fi-text-approx_size" placeholder="e.g. palm-sized, 4 in." />
               </div>
             </div>
 
-            <fieldset class="field file-group" data-max-mb="10">
+            <fieldset class="field file-group" data-max-mb="25">
               <legend>Reference photos <span class="opt">optional</span></legend>
               <div class="file-stack">
-                <input id="bk-ref-1" type="file" name="reference_1" accept="image/*" aria-label="Reference photo 1" aria-describedby="bk-ref-hint" />
-                <input id="bk-ref-2" type="file" name="reference_2" accept="image/*" aria-label="Reference photo 2" aria-describedby="bk-ref-hint" />
-                <input id="bk-ref-3" type="file" name="reference_3" accept="image/*" aria-label="Reference photo 3" aria-describedby="bk-ref-hint" />
+                <input id="bk-ref-1" type="file" name="fi-file-reference_1" accept="image/*" aria-label="Reference photo 1" aria-describedby="bk-ref-hint" />
+                <input id="bk-ref-2" type="file" name="fi-file-reference_2" accept="image/*" aria-label="Reference photo 2" aria-describedby="bk-ref-hint" />
+                <input id="bk-ref-3" type="file" name="fi-file-reference_3" accept="image/*" aria-label="Reference photo 3" aria-describedby="bk-ref-hint" />
               </div>
-              <span class="field-hint" id="bk-ref-hint">Optional &middot; up to about 10 MB total (2&ndash;3 phone photos). More references? Email them to <a href="mailto:aspraguetattoo@gmail.com?subject=Booking%20references">aspraguetattoo@gmail.com</a> after you submit.</span>
+              <span class="field-hint" id="bk-ref-hint">Optional &middot; up to about 25 MB total (2&ndash;3 phone photos). More references? Email them to <a href="mailto:aspraguetattoo@gmail.com?subject=Booking%20references">aspraguetattoo@gmail.com</a> after you submit.</span>
               <p class="file-warn" role="status" aria-live="polite" hidden></p>
               <button class="file-clear" type="button" hidden>Clear photos</button>
             </fieldset>
@@ -142,43 +141,43 @@
             <fieldset class="field choice-group style-group">
               <legend>Style</legend>
               <div class="pill-row">
-                <label class="pill"><input type="radio" name="style" value="Traditional" /><span>Traditional</span></label>
-                <label class="pill"><input type="radio" name="style" value="Neo-Traditional" /><span>Neo-Traditional</span></label>
-                <label class="pill"><input type="radio" name="style" value="Black &amp; Grey" /><span>Black &amp; Grey</span></label>
-                <label class="pill"><input type="radio" name="style" value="Other" id="bk-style-other" /><span>Other</span></label>
-                <label class="pill"><input type="radio" name="style" value="Not sure" /><span>Not sure</span></label>
+                <label class="pill"><input type="radio" name="fi-radio-style" value="Traditional" /><span>Traditional</span></label>
+                <label class="pill"><input type="radio" name="fi-radio-style" value="Neo-Traditional" /><span>Neo-Traditional</span></label>
+                <label class="pill"><input type="radio" name="fi-radio-style" value="Black &amp; Grey" /><span>Black &amp; Grey</span></label>
+                <label class="pill"><input type="radio" name="fi-radio-style" value="Other" id="bk-style-other" /><span>Other</span></label>
+                <label class="pill"><input type="radio" name="fi-radio-style" value="Not sure" /><span>Not sure</span></label>
               </div>
               <div class="field other-style">
                 <label for="bk-other-style">Other style <span class="opt">optional</span></label>
-                <input id="bk-other-style" type="text" name="other_style" placeholder="e.g. blackwork, realism, script" />
+                <input id="bk-other-style" type="text" name="fi-text-other_style" placeholder="e.g. blackwork, realism, script" />
               </div>
             </fieldset>
 
             <fieldset class="field choice-group">
               <legend>Color or black &amp; grey</legend>
               <div class="pill-row">
-                <label class="pill"><input type="radio" name="color_preference" value="Color" /><span>Color</span></label>
-                <label class="pill"><input type="radio" name="color_preference" value="Black &amp; Grey" /><span>Black &amp; Grey</span></label>
-                <label class="pill"><input type="radio" name="color_preference" value="Open to either" /><span>Open to either</span></label>
+                <label class="pill"><input type="radio" name="fi-radio-color_preference" value="Color" /><span>Color</span></label>
+                <label class="pill"><input type="radio" name="fi-radio-color_preference" value="Black &amp; Grey" /><span>Black &amp; Grey</span></label>
+                <label class="pill"><input type="radio" name="fi-radio-color_preference" value="Open to either" /><span>Open to either</span></label>
               </div>
             </fieldset>
 
             <fieldset class="field choice-group">
               <legend>Cover-up or rework?</legend>
               <div class="pill-row">
-                <label class="pill"><input type="radio" name="cover_up_or_rework" value="Yes" /><span>Yes</span></label>
-                <label class="pill"><input type="radio" name="cover_up_or_rework" value="No" /><span>No</span></label>
+                <label class="pill"><input type="radio" name="fi-radio-cover_up_or_rework" value="Yes" /><span>Yes</span></label>
+                <label class="pill"><input type="radio" name="fi-radio-cover_up_or_rework" value="No" /><span>No</span></label>
               </div>
             </fieldset>
 
             <div class="field">
               <label for="bk-days">Preferred days and times</label>
-              <input id="bk-days" type="text" name="preferred_days_times" placeholder="e.g. Saturdays, weekday afternoons" aria-describedby="bk-days-hint" />
+              <input id="bk-days" type="text" name="fi-text-preferred_days_times" placeholder="e.g. Saturdays, weekday afternoons" aria-describedby="bk-days-hint" />
               <span class="field-hint" id="bk-days-hint">Shop hours: Tue&ndash;Sat 12&ndash;8, Sun 12&ndash;6, closed Mon.</span>
             </div>
 
             <label class="check" for="bk-policy">
-              <input id="bk-policy" type="checkbox" name="deposit_policy_ack" value="Yes, I understand the $100 non-refundable deposit and rescheduling policy." required />
+              <input id="bk-policy" type="checkbox" name="fi-checkbox-deposit_policy_ack" value="Yes, I understand the $100 non-refundable deposit and rescheduling policy." required />
               <span>I understand the $100 non-refundable deposit and <a href="faq.html#policies" target="_blank" rel="noopener">rescheduling policy</a>.&nbsp;<span class="req">*</span></span>
             </label>
 

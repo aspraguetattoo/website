@@ -69,58 +69,57 @@
       <div class="book-layout">
         <div class="form-col">
         <p class="aside-kicker">Join the list</p>
-        <form class="waitlist-form" action="https://formsubmit.co/aspraguetattoo@gmail.com" method="POST" enctype="multipart/form-data">
-          <input type="hidden" name="_subject" value="New WAITLIST signup" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value="https://aspraguetattoos.com/thanks.html" />
-          <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" hidden />
+        <form class="waitlist-form" action="https://forminit.com/f/5znqfpinwky" data-thanks="https://aspraguetattoos.com/thanks.html" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="fi-text-form_type" value="WAITLIST" />
+          <input type="hidden" name="fi-text-subject" value="New WAITLIST signup" />
+          <input type="hidden" name="_gotcha" value="" style="display:none !important" />
 
           <div class="field-row">
             <div class="field">
               <label for="wl-name">Name <span class="req">*</span></label>
-              <input id="wl-name" type="text" name="name" autocomplete="name" required />
+              <input id="wl-name" type="text" name="fi-sender-fullName" autocomplete="name" required />
             </div>
             <div class="field">
               <label for="wl-email">Email <span class="req">*</span></label>
-              <input id="wl-email" type="email" name="email" autocomplete="email" required />
+              <input id="wl-email" type="email" name="fi-sender-email" autocomplete="email" required />
             </div>
           </div>
 
           <div class="field-row">
             <div class="field">
               <label for="wl-phone">Phone <span class="opt">optional</span></label>
-              <input id="wl-phone" type="tel" name="phone" autocomplete="tel" />
+              <input id="wl-phone" type="tel" name="fi-text-phone" autocomplete="tel" />
             </div>
             <div class="field">
               <label for="wl-ig">Instagram handle <span class="opt">optional</span></label>
-              <input id="wl-ig" type="text" name="instagram" placeholder="@yourhandle" autocapitalize="off" />
+              <input id="wl-ig" type="text" name="fi-text-instagram" placeholder="@yourhandle" autocapitalize="off" />
             </div>
           </div>
 
           <div class="field">
             <label for="wl-idea">Tattoo idea <span class="req">*</span></label>
-            <textarea id="wl-idea" name="tattoo_idea" rows="6" required placeholder="What you want, any must-have elements, color or black &amp; grey, cover-up or fresh skin."></textarea>
+            <textarea id="wl-idea" name="fi-text-tattoo_idea" rows="6" required placeholder="What you want, any must-have elements, color or black &amp; grey, cover-up or fresh skin."></textarea>
           </div>
 
           <div class="field-row">
             <div class="field">
               <label for="wl-placement">Placement</label>
-              <input id="wl-placement" type="text" name="placement" placeholder="e.g. forearm, calf" />
+              <input id="wl-placement" type="text" name="fi-text-placement" placeholder="e.g. forearm, calf" />
             </div>
             <div class="field">
               <label for="wl-size">Approximate size</label>
-              <input id="wl-size" type="text" name="approx_size" placeholder="e.g. palm-sized, 4 in." />
+              <input id="wl-size" type="text" name="fi-text-approx_size" placeholder="e.g. palm-sized, 4 in." />
             </div>
           </div>
 
-          <fieldset class="field file-group" data-max-mb="10">
+          <fieldset class="field file-group" data-max-mb="25">
             <legend>Reference photos <span class="opt">optional</span></legend>
             <div class="file-stack">
-              <input id="wl-ref-1" type="file" name="reference_1" accept="image/*" aria-label="Reference photo 1" aria-describedby="wl-ref-hint" />
-              <input id="wl-ref-2" type="file" name="reference_2" accept="image/*" aria-label="Reference photo 2" aria-describedby="wl-ref-hint" />
-              <input id="wl-ref-3" type="file" name="reference_3" accept="image/*" aria-label="Reference photo 3" aria-describedby="wl-ref-hint" />
+              <input id="wl-ref-1" type="file" name="fi-file-reference_1" accept="image/*" aria-label="Reference photo 1" aria-describedby="wl-ref-hint" />
+              <input id="wl-ref-2" type="file" name="fi-file-reference_2" accept="image/*" aria-label="Reference photo 2" aria-describedby="wl-ref-hint" />
+              <input id="wl-ref-3" type="file" name="fi-file-reference_3" accept="image/*" aria-label="Reference photo 3" aria-describedby="wl-ref-hint" />
             </div>
-            <span class="field-hint" id="wl-ref-hint">Optional &middot; up to about 10 MB total (2&ndash;3 phone photos). More references? Email them to <a href="mailto:aspraguetattoo@gmail.com?subject=Waitlist%20references">aspraguetattoo@gmail.com</a> after you submit.</span>
+            <span class="field-hint" id="wl-ref-hint">Optional &middot; up to about 25 MB total (2&ndash;3 phone photos). More references? Email them to <a href="mailto:aspraguetattoo@gmail.com?subject=Waitlist%20references">aspraguetattoo@gmail.com</a> after you submit.</span>
             <p class="file-warn" role="status" aria-live="polite" hidden></p>
             <button class="file-clear" type="button" hidden>Clear photos</button>
           </fieldset>
@@ -128,21 +127,21 @@
           <fieldset class="field choice-group">
             <legend>Style</legend>
             <div class="pill-row">
-              <label class="pill"><input type="radio" name="style" value="Traditional" /><span>Traditional</span></label>
-              <label class="pill"><input type="radio" name="style" value="Neo-Traditional" /><span>Neo-Traditional</span></label>
-              <label class="pill"><input type="radio" name="style" value="Black &amp; Grey" /><span>Black &amp; Grey</span></label>
-              <label class="pill"><input type="radio" name="style" value="Other" id="wl-style-other" /><span>Other</span></label>
-              <label class="pill"><input type="radio" name="style" value="Not sure" /><span>Not sure</span></label>
+              <label class="pill"><input type="radio" name="fi-radio-style" value="Traditional" /><span>Traditional</span></label>
+              <label class="pill"><input type="radio" name="fi-radio-style" value="Neo-Traditional" /><span>Neo-Traditional</span></label>
+              <label class="pill"><input type="radio" name="fi-radio-style" value="Black &amp; Grey" /><span>Black &amp; Grey</span></label>
+              <label class="pill"><input type="radio" name="fi-radio-style" value="Other" id="wl-style-other" /><span>Other</span></label>
+              <label class="pill"><input type="radio" name="fi-radio-style" value="Not sure" /><span>Not sure</span></label>
             </div>
             <div class="field other-style">
               <label for="wl-other-style">Other style <span class="opt">optional</span></label>
-              <input id="wl-other-style" type="text" name="other_style" placeholder="e.g. blackwork, realism, script" />
+              <input id="wl-other-style" type="text" name="fi-text-other_style" placeholder="e.g. blackwork, realism, script" />
             </div>
           </fieldset>
 
           <div class="field">
             <label for="wl-days">Preferred days</label>
-            <input id="wl-days" type="text" name="preferred_days" placeholder="e.g. Saturdays, weekday afternoons" aria-describedby="wl-days-hint" />
+            <input id="wl-days" type="text" name="fi-text-preferred_days" placeholder="e.g. Saturdays, weekday afternoons" aria-describedby="wl-days-hint" />
             <span class="field-hint" id="wl-days-hint">Shop is open Tue&ndash;Sun.</span>
           </div>
 
